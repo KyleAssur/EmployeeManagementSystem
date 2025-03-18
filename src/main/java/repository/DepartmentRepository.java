@@ -32,4 +32,3 @@ public class DepartmentRepository implements IRepository<Department, String> {
         return departmentDB.remove(id) != null;
     }
 }
-

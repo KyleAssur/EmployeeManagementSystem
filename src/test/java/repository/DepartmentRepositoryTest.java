@@ -54,4 +54,3 @@ public class DepartmentRepositoryTest {
         assertNull(repository.read("D001"));
     }
 }
-
