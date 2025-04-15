@@ -1,2 +1,3 @@
-![employee_management_uml](https://github.com/user-attachments/assets/4a05bb9e-8cf3-4d49-9a3b-f4ad527f973e)
+![UML](https://github.com/user-attachments/assets/e2e3d11b-b844-4c03-b10b-ea4f54d58ff9)
+
 
