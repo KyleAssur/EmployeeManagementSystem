@@ -2,13 +2,22 @@ package factory;
 
 import domain.Employee;
 import org.junit.jupiter.api.Test;
+import java.time.LocalDate;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class EmployeeFactoryTest {
+/*
+ * EmployeeFactoryTest class
+ * Author: [Kyle Assur] ([219070091])
+ */
+
+class EmployeeFactoryTest {
     @Test
-    public void testCreateEmployee() {
-        Employee employee = EmployeeFactory.createEmployee("101", "John Doe", "Manager", 75000);
+    void createEmployee() {
+        Employee employee = EmployeeFactory.createEmployee("E001", "John", "Doe",
+                "john.doe@company.com", LocalDate.now(), "D001", "P001");
+
         assertNotNull(employee);
-        assertEquals("John Doe", employee.getName());
+        assertEquals("E001", employee.getEmployeeId());
+        assertEquals("John", employee.getFirstName());
     }
 }
