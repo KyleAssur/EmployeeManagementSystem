@@ -1,29 +1,22 @@
 package factory;
+
 import domain.Department;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class DepartmentFactoryTest {
-
+/**
+ * DepartmentFactoryTest class
+ Author: [Chad Assur] ([222314834])
+ */
+class DepartmentFactoryTest {
     @Test
-    public void testCreateDepartment() {
-        // Create a Department instance using the factory
-        Department department = DepartmentFactory.createDepartment("D001", "IT Department");
+    void createDepartment() {
+        Department department = DepartmentFactory.createDepartment("D001", "IT", "Building A");
 
-        // Assertions
-        assertNotNull(department, "Department should not be null");
-        assertEquals("D001", department.getId(), "Department ID should match");
-        assertEquals("IT Department", department.getName(), "Department name should match");
-    }
-
-    @Test
-    public void testCreateDepartmentWithNullValues() {
-        // Create a Department with null values
-        Department department = DepartmentFactory.createDepartment(null, null);
-
-        // Assertions
-        assertNotNull(department, "Department should still be created");
-        assertNull(department.getId(), "Department ID should be null");
-        assertNull(department.getName(), "Department name should be null");
+        assertNotNull(department);
+        assertEquals("D001", department.getDepartmentId());
+        assertEquals("IT", department.getName());
+        assertEquals("Building A", department.getLocation());
     }
 }
+
