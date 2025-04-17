@@ -1,4 +1,5 @@
 package factory;
+
 import domain.Department;
 /*
  * PositionRepositoryTest class
@@ -7,13 +8,17 @@ import domain.Department;
 
 
 
+/**
+ * DepartmentFactory class
+ * Author: [Chad Assur] ([222314834])
+ */
 public class DepartmentFactory {
-
-    public static Department createDepartment(String id, String name) {
+    public static Department createDepartment(String departmentId, String name, String location) {
         return new Department.Builder()
-                .setId(id)
-                .setName(name)
+                .departmentId(departmentId)
+                .name(name)
+                .location(location)
                 .build();
     }
-
 }
+

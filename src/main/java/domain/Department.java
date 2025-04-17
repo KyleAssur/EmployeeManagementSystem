@@ -1,24 +1,56 @@
 package domain;
 
+/**
+ * Department model class
+ * Author: [Chad Assur] ([222314834])
+ */
 public class Department {
-    private final String id;
-    private final String name;
+    private String departmentId;
+    private String name;
+    private String location;
 
     private Department(Builder builder) {
-        this.id = builder.id;
+        this.departmentId = builder.departmentId;
         this.name = builder.name;
+        this.location = builder.location;
     }
 
-    public String getId() { return id; }
-    public String getName() { return name; }
+    public String getDepartmentId() {
+        return departmentId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLocation() {
+        return location;
+    }
 
     public static class Builder {
-        private String id, name;
+        private String departmentId;
+        private String name;
+        private String location;
 
-        public Builder setId(String id) { this.id = id; return this; }
-        public Builder setName(String name) { this.name = name; return this; }
+        public Builder departmentId(String departmentId) {
+            this.departmentId = departmentId;
+            return this;
+        }
 
-        public Department build() { return new Department(this); }
+        public Builder name(String name) {
+            this.name = name;
+            return this;
+        }
+
+        public Builder location(String location) {
+            this.location = location;
+            return this;
+        }
+
+        public Department build() {
+            return new Department(this);
+        }
     }
 }
+
 
