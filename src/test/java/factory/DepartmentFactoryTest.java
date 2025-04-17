@@ -3,6 +3,12 @@ import domain.Department;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
+/*
+ * DepartmentFactoryTest class
+ * Author: (Ona-Odwa Faku) (222878746)
+ */
+
+
 public class DepartmentFactoryTest {
 
     @Test
