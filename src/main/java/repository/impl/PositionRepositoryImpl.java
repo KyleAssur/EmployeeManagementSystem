@@ -9,6 +9,7 @@ import java.util.Map;
  * PositionRepository implementation
  * Author:Author: (Ona-Odwa Faku) (222878746)
  */
+
 public class PositionRepositoryImpl implements PositionRepository {
     private static PositionRepositoryImpl instance = null;
     private Map<String, Position> positions;
@@ -37,13 +38,22 @@ public class PositionRepositoryImpl implements PositionRepository {
 
     @Override
     public Position update(Position position) {
-        positions.put(position.getPositionId(), position);
-        return position;
+        if (positions.containsKey(position.getPositionId())) {
+            positions.put(position.getPositionId(), position);
+            return position;
+        }
+        return null;
     }
 
     @Override
     public boolean delete(String positionId) {
         return positions.remove(positionId) != null;
     }
+
+    // For testing purposes only
+    public void clearForTesting() {
+        positions.clear();
+    }
 }
+
 
