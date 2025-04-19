@@ -10,3 +10,4 @@ public interface PositionRepository extends Repository<Position, String> {
     // Position-specific methods can be added here if needed
 }
 
+
